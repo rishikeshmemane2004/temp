@@ -22,7 +22,7 @@ public class HomePageTest extends BaseTest{
 							  };
 	}
 	
-	@FrameworkAnnotations(author = "Bahubali",category = "smoke")
+	@FrameworkAnnotations(author = "Siddhesh",category = {"smoke","regression","Customer Mgmt"})
 	@Test(dataProvider="getData",description="Verifying home page test")
 	public void verifyHomePageTest(String un, String pw)
 	{
@@ -31,7 +31,7 @@ public class HomePageTest extends BaseTest{
 		Assert.assertTrue(homePage.isSearchPresent(),"Search text did not display !!!"); 
 	}
 	
-	@FrameworkAnnotations(author = "Amit",category = "smoke")
+	@FrameworkAnnotations(author = "Ravi",category = "smoke")
 	@Test(description="Verifying add customer functionality")
 	public void verifyAddCustomer()
 	{

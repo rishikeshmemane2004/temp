@@ -28,18 +28,20 @@ public final class ExtentReport {
 	public static void createTest(String testCaseName)
 	{
 		extentTest = extent.createTest(testCaseName);
-		
+		//provides ability to run extent test in parallel
 		ExtentManager.setExtentTest(extentTest);
 	}
 	
-	public static void assignAuthor(String author)
+	public static void assignAuthor(String[] strings)
 	{
-		ExtentManager.getExtentTest().assignAuthor(author);
+		for(String s : strings)
+			ExtentManager.getExtentTest().assignAuthor(s);
 	}
 	
-	public static void assignCategory(String category)
+	public static void assignCategory(String[] strings)
 	{
-		ExtentManager.getExtentTest().assignCategory(category);
+		for(String s :strings)
+			ExtentManager.getExtentTest().assignCategory(s);
 	}
 
 
